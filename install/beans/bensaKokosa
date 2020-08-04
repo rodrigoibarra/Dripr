@@ -1,7 +1,6 @@
 openssl
 mongodb-community
 git
-ruby
 thefuck
 zsh
 zsh-completions
