@@ -1,6 +1,12 @@
 # This script is based on Mihaliak's defaults
 
-COMPUTER_NAME="Hammer of Dawn"
+echo what are we calling this system?
+
+read varname
+
+COMPUTER_NAME="$varname"
+
+echo ok we calling it $varname
 
 osascript -e 'tell application "System Preferences" to quit'
 
