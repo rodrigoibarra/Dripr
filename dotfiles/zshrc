@@ -21,6 +21,7 @@ antigen theme https://github.com/denysdovhan/spaceship-zsh-theme spaceship
 
 antigen bundle git
 antigen bundle command-not-found
+antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle autojump
 antigen bundle common-aliases
 antigen bundle compleat
@@ -44,7 +45,17 @@ source "$HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
 # Load custom aliases
 [[ -s "$HOME/.bash_aliases" ]] && source "$HOME/.bash_aliases"
 
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
 
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 eval $(thefuck --alias)
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh  # This loads NVM
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+export PATH="/usr/local/opt/ruby/bin:$PATH"
