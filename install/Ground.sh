@@ -17,37 +17,31 @@ brew upgrade
 sleep 1
 
 echo "Let's go get some beans to grind."
-for i in $(cat beans/bensaKokosa);
-    do brew install "$i";
-done
+brew install openssl
+brew install mongodb-community
+brew install git
+brew install thefuck
+brew install zsh
+brew install zsh-completions
+brew install antigen
+brew install unrar
+brew install wifi-password
+brew install mas
+brew install mas-cli/tap/mas
 
-echo "besaKokosa brought all the brews from the homebrew"
-
-location=--appdir="/Applications"
-for i in $(cat beans/gesha);
-    do brew cask install $location "$i";
-done
-
-echo "Gesha brought all the apps from the web"
-
-for i in $(cat beans/typica);
-    do mas install "$i";
-done
-
-echo "Typica brought all the apps AppStore"
+ brew cask install --appdir="/Applications"dropbox
+ brew cask install --appdir="/Applications"visual-studio-code
+ brew cask install --appdir="/Applications"sequel-pro
+ brew cask install --appdir="/Applications"hyper
+ brew cask install --appdir="/Applications"openemu
+ brew cask install --appdir="/Applications"firefox
+ brew cask install --appdir="/Applications"transmit
+ brew cask install --appdir="/Applications"vlc
 
 sleep 1
 
-for i in $(cat beans/estelar);
-    do gem install "$i";
-done
-
-for i in $(cat beans/laGruta);
-    do npm install "$i";
-done
-
-echo "Estelar and laGruta brought all the gems and npm packages"
-
+npm install -g @vue/cli
+npm install -g grunt-cli
 
 # Make zsh default shell
 sudo chsh -s $(which zsh)
